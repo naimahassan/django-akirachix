@@ -12,6 +12,8 @@ class Trainer(models.Model):
 	course_teaching=models.CharField(max_length=100)
 	working_status=models.CharField(max_length=100)
 	others=models.CharField(max_length=100)
+	pic=models.ImageField(upload_to="profile_pic",blank=True)
+
 
 
 	def __str__(self):

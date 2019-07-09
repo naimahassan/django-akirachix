@@ -6,7 +6,7 @@ class Course(models.Model):
 	description=models.TextField()
 	start_date=models.DateField(max_length=30)
 	end_date=models.DateField(max_length=30)
-	course_duration=models.SmallIntegerField(max_length=30)
+	course_duration=models.SmallIntegerField()
 	trainer=models.ForeignKey(Trainer,null=True,on_delete=models.CASCADE)
 
 	def __str__(self):

@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>all students</title>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	
+	<div class="container">
+		<h2>List of Students</h2>
+				<button ><a href="/student/add/">NEW STUDENT</a></button>
+
+		<!-- {% for student in students %} -->
+		<!-- {% endfor %} -->
+		<br>
+		<br>
+	<table class="table table-striped">
+		<tr>
+			<th>First Name</th>
+			<th>Second Name</th>
+			<th>Registration Number</th>
+			<th>courses</th>
+			<th>Details</th>
+			<th>Edit student</th>
+		</tr>
+
+		{% for student in students %}
+		<tr>
+			<td> {{student.first_name }}</td>
+			<td> {{student.second_name}}</td>
+			<td> {{student.registration_number}}</td>
+			<td> {{student.courses}}</td>
+			<td><a href="/student/view/{{student.pk}}/">View More</a> </td>
+			<td><a href="/student/edit/{{student.pk}}/">Edit</a> </td>
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+	
+
+</body>
+</html>

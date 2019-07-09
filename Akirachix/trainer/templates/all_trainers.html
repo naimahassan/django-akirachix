@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>all trainers</title>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<h2>List of Trainers</h2>
+	<div class="container">
+				<button ><a href="/trainer/add/">NEW TRAINER</a></button>
+				<br>
+				<br>
+
+	<table class="table table-striped">
+		<tr>
+			<th>First Name</th>
+			<th>Second Name</th>
+			<th>Proffesion</th>
+			<th>Gender</th>
+			<th>Details</th>
+			<th>Edit Trainer</th>
+		</tr>
+
+		{% for trainer in trainers %}
+		<tr>
+			<td> {{trainer.first_name }}</td>
+			<td> {{trainer.second_name}}</td>
+			<td> {{trainer.profession}}</td>
+			<td> {{trainer.gender}}</td>
+			<td><a href="/trainer/view/{{trainer.pk}}/">View More</a> </td>
+			<td><a href="/trainer/edit/{{trainer.pk}}/">Edit</a> </td>
+			
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+	
+
+</body>
+</html>

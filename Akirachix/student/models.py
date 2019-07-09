@@ -11,10 +11,17 @@ class Student(models.Model):
 	phone_number=models.CharField(max_length=70)
 	date_joined=models.DateField()
 	courses=models.ManyToManyField(Course)
+	pic=models.ImageField(upload_to="profile_pic",blank=True,null=True)
 
 	def __str__(self):
 		return self.first_name
 
 
 
-		
+	# def profile_pic(self, obj):
+ #        return mark_safe('<img src="{url}" width="{width}" height={height} />'.format(
+ #            url = obj.headshot.url,
+ #            width=obj.headshot.width,
+ #            height=obj.headshot.height,
+ #            )
+ #    )	

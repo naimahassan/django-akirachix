@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>student detail</title>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<style type="text/css">
+		.container {
+			background-color: #ccc;
+			margin: 0 auto;
+		}
+
+		img{
+			width: 250px;
+			height: 100px;
+		}
+	</style>
+	<div class="container">
+		
+		<p>Name: {{course.name}}</p>
+		<p>Description: {{course.description}}</p>
+		<p>Duration: {{course.course_duration}}</p>
+		<p>Trainer: {{course.trainer}}</p>
+		
+		<button ><a href="/course/edit/{{course.pk}}/">EDIT COURSE</a></button>
+			
+	</div>
+
+</body>
+</html>
