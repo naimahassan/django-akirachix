@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+	{%if user.is_authenticated%}
+
+	<h3>Welcome {{user.username}}</h3>
+	<h4>Add a student</h4>
+	<button> <a href="/student/add/">Add</a></button>
+
+	{%else%}
+
+	<h2>Hellow Guest</h2>
+	<h4>You can log in</h4>
+	<button> <a href="/accounts/login/">Login</a></button>
+	<h4>or create an account</h4>
+	<button> <a href="/accounts/register/">Register</a></button>
+
+	{%endif%}
+		
+</body>
+</html>
